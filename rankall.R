@@ -40,5 +40,6 @@ rankall <- function(outcome, num = "best") {
                 names(y) <- c("hospital", "state", "Mortality.Rate.Heart.Attack")
                 output <- build_state_ranking(y, num)
         }
+        row.names(output) <- output$state
         output
 }
